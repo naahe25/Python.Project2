@@ -162,6 +162,7 @@ class Customer_Info:
         self.fetch_data()
         self.clear()
         con.close()
+        messagebox.showinfo("Inserted")
 
     def fetch_data(self):
         con = pymysql.connect(host="localhost",user = "root",password = "",database="customer")
@@ -198,7 +199,7 @@ class Customer_Info:
     def update_data(self):
         con = pymysql.connect(host="localhost", user="root", password="", database="customer")   
         cur = con.cursor()
-        cur.execute("UPDATE customer SET name=%s, phone=%s, email=%s, card_no=%s, gender=%s, address=%s WHERE card_no=%s", (
+        cur.execute("UPDATE customer set name=%s, phone=%s, email=%s, card_no=%s, gender=%s, address=%s where card_no=%s", (
             self.name_var.get(),
             self.contact_var.get(),
             self.email_var.get(),
