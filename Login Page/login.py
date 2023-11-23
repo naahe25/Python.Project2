@@ -13,7 +13,7 @@ class Login_Window:
         
 
         lbl_bg = Label(self.root,image= self.bg)
-        lbl_bg.place(x=5,y=5,relwidth=1,relheight=1)
+        lbl_bg.place(x=0,y=0,relwidth=1,relheight=1)
 
         frame = Frame(self.root,bg="black")
         frame.place(x=540,y=170,width=340,height=450)
